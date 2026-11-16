@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0b">
+<meta name="description" content="Join the GOLDEN ELITE recruitment waiting list. Official applications open 1 December 2026.">
+<title>GOLDEN ELITE | Recruitment Waiting List</title>
+<style>
+:root{--bg:#0b0b0b;--panel:#141414;--gold:#d8b45d;--gold2:#f0d995;--muted:#aaa49a;--line:#302b20;--white:#f7f4ec}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+header{background:rgba(11,11,11,.96);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.13em}
+.brand-mark{width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:24px Georgia,serif}
+.brand small{display:block;color:var(--gold);font-size:9px;letter-spacing:.32em;margin-top:4px}
+.header-note{font-size:11px;letter-spacing:.12em;color:var(--gold2);border:1px solid #66532e;padding:9px 12px;border-radius:3px}
+.hero{position:relative;overflow:hidden;padding:72px 0 55px;background:radial-gradient(ellipse at 82% 30%,rgba(177,137,48,.2),transparent 38%),linear-gradient(120deg,#0b0b0b 42%,#17140e 100%);border-bottom:1px solid var(--line)}
+.hero:after{content:"GE";position:absolute;right:3%;top:2%;font:clamp(190px,32vw,390px)/1 Georgia,serif;color:rgba(216,180,93,.045);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:760px}
+.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.27em;text-transform:uppercase}
+h1{font:400 clamp(42px,7vw,76px)/1.03 Georgia,"Times New Roman",serif;margin:17px 0}
+h1 em{font-style:normal;color:var(--gold2)}
+.hero p{color:#c1bbb0;max-width:620px;line-height:1.8;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{border:1px solid var(--line);border-radius:30px;padding:8px 12px;color:#c9c1b2;font-size:11px}
+.pill:before{content:"✦";color:var(--gold);margin-right:7px}
+main{padding:48px 0 68px}
+.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:24px;align-items:start}
+.panel{background:linear-gradient(145deg,#171612,#111);border:1px solid #554322;border-radius:8px;padding:clamp(22px,4vw,36px);box-shadow:0 20px 60px #0007}
+.panel h2{font:400 34px Georgia,serif;color:var(--gold2);margin:8px 0}
+.intro{font-size:13px;color:var(--muted);line-height:1.7;margin:0 0 25px}
+label{display:block;color:#d7c28f;font-size:11px;letter-spacing:.08em;font-weight:700;margin:16px 0 7px}
+input,select,textarea{width:100%;background:#0b0b0b;border:1px solid #413722;color:var(--white);border-radius:4px;padding:13px 12px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+input::placeholder,textarea::placeholder{color:#777166}
+textarea{min-height:88px;resize:vertical}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.full{grid-column:1/-1}
+.check{display:flex;align-items:flex-start;gap:10px;color:#bdb5a7;font-size:11px;line-height:1.6;letter-spacing:0;font-weight:400;margin:19px 0}
+.check input{width:16px;height:16px;flex:0 0 16px;margin:1px 0;accent-color:#d8b45d}
+.btn{width:100%;border:1px solid var(--gold);background:linear-gradient(110deg,#a77b27,#ead18a);color:#17130a;padding:15px 18px;border-radius:4px;font-size:12px;font-weight:900;letter-spacing:.09em;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.status{display:none;margin-top:16px;padding:13px;border:1px solid #66532e;border-radius:4px;background:#211b0e;color:#f0d995;font-size:12px;line-height:1.6}
+.side{display:grid;gap:15px}
+.info{padding:22px;background:#12110e;border:1px solid var(--line);border-radius:7px}
+.info .number{font:32px Georgia,serif;color:var(--gold2)}
+.info h3{font:22px Georgia,serif;color:var(--gold2);margin:8px 0}
+.info p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.steps{list-style:none;padding:0;margin:15px 0 0}
+.steps li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:12px;color:#c9c1b2;line-height:1.55}
+.steps b{color:var(--gold2);font:20px Georgia,serif;min-width:20px}
+.notice{margin-top:18px;padding:14px;border-left:2px solid var(--gold);background:#17140f;color:#bdb5a7;font-size:11px;line-height:1.7}
+footer{border-top:1px solid var(--line);padding:25px 0;color:#817b70;font-size:10px;line-height:1.7}
+.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.hero{padding:56px 0 42px}.header-note{font-size:9px}.grid{grid-template-columns:1fr}.full{grid-column:auto}}
+@media(max-width:430px){.wrap{width:calc(100% - 26px)}.nav{min-height:66px}.brand{font-size:12px}.brand-mark{width:32px;height:32px}.header-note{padding:7px 8px}.panel{padding:21px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="GOLDEN ELITE home">
+      <span class="brand-mark">G</span>
+      <span>GOLDEN ELITE<small>SOUTH AFRICA</small></span>
+    </a>
+    <span class="header-note">RECRUITMENT · 18+ ONLY</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Where exclusivity meets elegance</div>
+    <h1>Be first in line.<br><em>Join the waiting list.</em></h1>
+    <p>Interested in becoming part of GOLDEN ELITE? Register your interest now. Our recruitment waiting list is open ahead of the official application period.</p>
+    <div class="pills">
+      <span class="pill">South African platform</span>
+      <span class="pill">Private interest register</span>
+      <span class="pill">Adults 18+ only</span>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="layout">
+    <section class="panel">
+      <div class="eyebrow">Your first step</div>
+      <h2>Join the waiting list</h2>
+      <p class="intro">Tell us how to contact you and what you are interested in advertising. This is a recruitment expression of interest only — it is not the official GOLDEN ELITE application.</p>
+
+      <form id="waitingListForm">
+        <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="grid">
+          <div class="full">
+            <label for="fullName">FULL NAME *</label>
+            <input id="fullName" name="full_name" autocomplete="name" maxlength="120" placeholder="Enter your full name" required>
+          </div>
+          <div>
+            <label for="whatsapp">WHATSAPP NUMBER *</label>
+            <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" maxlength="30" placeholder="+27 ..." required>
+          </div>
+          <div>
+            <label for="email">EMAIL ADDRESS *</label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="160" placeholder="you@example.com" required>
+          </div>
+          <div>
+            <label for="province">PROVINCE *</label>
+            <select id="province" name="province" required>
+              <option value="">Select province</option>
+              <option>Eastern Cape</option><option>Free State</option><option>Gauteng</option>
+              <option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option>
+              <option>North West</option><option>Northern Cape</option><option>Western Cape</option>
+              <option>Other / Outside South Africa</option>
+            </select>
+          </div>
+          <div>
+            <label for="city">CITY / TOWN *</label>
+            <input id="city" name="city" maxlength="100" placeholder="Your city or town" required>
+          </div>
+          <div class="full">
+            <label for="advertising">WHAT WOULD YOU LIKE TO ADVERTISE? *</label>
+            <select id="advertising" name="advertising_interest" required>
+              <option value="">Choose an option</option>
+              <option>Content creator</option>
+              <option>Service advertiser</option>
+              <option>Business / brand</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="message">ANYTHING ELSE YOU WOULD LIKE US TO KNOW? (OPTIONAL)</label>
+            <textarea id="message" name="message" maxlength="500" placeholder="Optional short message"></textarea>
+          </div>
+        </div>
+        <label class="check">
+          <input id="consent" type="checkbox" required>
+          <span>I have read the privacy notice and consent to GOLDEN ELITE using my details for waiting-list administration and recruitment communications. I understand this is not an official application or approval.</span>
+        </label>
+        <button class="btn" type="submit">REGISTER MY INTEREST</button>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </form>
+      <div class="notice"><strong>Privacy notice (POPIA):</strong> GOLDEN ELITE is the responsible party for the personal information submitted on this page. For privacy questions or requests, contact <a href="mailto:goldenelite.registration@gmail.com">goldenelite.registration@gmail.com</a>.
+        <details style="margin-top:10px"><summary style="cursor:pointer;color:var(--gold);font-weight:700">Read the full waiting-list privacy notice</summary>
+          <div style="padding-top:12px">
+            <p><strong>1. What we collect.</strong> We collect your name, WhatsApp number, email address, province, city or town, advertising interest, any optional message you choose to send, your consent record and technical information used to protect the form from abuse.</p>
+            <p><strong>2. Why we use it.</strong> We use this information to record and manage your expression of interest, contact you about GOLDEN ELITE recruitment and launch updates, respond to your questions, and protect the waiting-list service against spam and misuse. We do not use the waiting-list form to create an account, approve an advertiser or publish a profile.</p>
+            <p><strong>3. Your choice and consent.</strong> By ticking the consent box and submitting the form, you agree that we may use the details you provide for the purposes above. You may withdraw that consent by emailing us. Withdrawal does not affect processing already lawfully carried out, and we may retain information where the law permits or requires it.</p>
+            <p><strong>4. Who may process the information.</strong> Access is limited to people who need it to administer recruitment. Our website, database and hosting providers may process information on our behalf to operate and secure the service. We do not sell your personal information. We will not disclose it to unrelated third parties unless you request it, it is needed to provide the service, or disclosure is permitted or required by law.</p>
+            <p><strong>5. Storage, security and transfers.</strong> We use access controls and technical safeguards intended to protect the register. No internet transmission or storage system can be guaranteed completely secure. Service providers may store or process information in locations outside South Africa; where this occurs, we will take steps required by POPIA for any cross-border transfer.</p>
+            <p><strong>6. How long we keep it.</strong> We keep waiting-list information only for as long as reasonably needed to manage recruitment and related communications, and then securely delete or de-identify it, unless a longer period is required or permitted by law or needed to resolve a dispute or protect legal rights.</p>
+            <p><strong>7. Your rights.</strong> Subject to applicable law, you may ask to access your personal information, correct or update it, withdraw consent, object to certain processing, or request deletion. Email <a href="mailto:goldenelite.registration@gmail.com">goldenelite.registration@gmail.com</a> and describe your request. We may need to verify your identity before acting.</p>
+            <p><strong>8. Complaints.</strong> If you believe your personal information has been handled unlawfully, please contact us first. You may also lodge a complaint with the South African Information Regulator through <a href="https://inforegulator.org.za/" target="_blank" rel="noopener noreferrer">inforegulator.org.za</a>.</p>
+            <p><strong>9. Children.</strong> This waiting list is for adults aged 18 or older. Do not submit information if you are under 18.</p>
+            <p><strong>10. Changes.</strong> We may update this notice when our practices or legal requirements change. The current notice will be shown on this page.</p>
+            <p><strong>Privacy contact:</strong> GOLDEN ELITE · <a href="mailto:goldenelite.registration@gmail.com">goldenelite.registration@gmail.com</a>.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="info">
+        <div class="eyebrow">Mark your calendar</div>
+        <div class="number">01 DEC 2026</div>
+        <h3>Official applications open</h3>
+        <p>On 1 December 2026, interested people will be able to submit their official applications directly through the GOLDEN ELITE website.</p>
+      </section>
+      <section class="info">
+        <div class="eyebrow">How it works</div>
+        <ul class="steps">
+          <li><b>01</b><span>See our recruitment advertisement and open this official GOLDEN ELITE waiting-list page.</span></li>
+          <li><b>02</b><span>Submit your contact details and tell us what you are interested in advertising.</span></li>
+          <li><b>03</b><span>We keep your details in our private recruitment register and may contact you with updates.</span></li>
+          <li><b>04</b><span>Submit your separate official application on GOLDEN ELITE from 1 December 2026.</span></li>
+        </ul>
+      </section>
+      <section class="info">
+        <div class="eyebrow">GOLDEN ELITE</div>
+        <h3>Your privacy. Our priority.</h3>
+        <p>Joining the waiting list does not create an advertiser account, guarantee acceptance or publish a profile. All official applications remain subject to the platform's review and verification process.</p>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer">
+    <span>© 2026 GOLDEN ELITE · SOUTH AFRICA</span>
+    <span>Recruitment waiting list · Adults 18+ only</span>
+  </div>
+</footer>
+
+<script>
+const waitingListForm = document.getElementById('waitingListForm');
+waitingListForm.addEventListener('submit', async function (event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const status = document.getElementById('status');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const name = form.elements.full_name.value.trim();
+  status.style.display = 'block';
+  status.textContent = 'Submitting your details securely…';
+  submitButton.disabled = true;
+  submitButton.textContent = 'SUBMITTING…';
+  const payload = {
+    full_name: name,
+    whatsapp_number: form.elements.whatsapp.value.trim(),
+    email: form.elements.email.value.trim(),
+    province: form.elements.province.value,
+    city_town: form.elements.city.value.trim(),
+    advertising_interest: form.elements.advertising_interest.value,
+    message: form.elements.message.value.trim(),
+    consent: document.getElementById('consent').checked,
+    website: form.elements.website.value
+  };
+  try {
+    const response = await fetch('https://pkfptwnlgzimocemzdmb.supabase.co/functions/v1/waiting-list-submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': 'sb_publishable_I7pFKkzNSQZVSh0qbuqb6g_aANUIZZi'
+      },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || result.success !== true) {
+      throw new Error(result.message || 'Your details could not be submitted. Please try again.');
+    }
+    status.textContent = 'Thank you, ' + name + '. Your waiting-list registration has been received successfully. This is not an official application or approval.';
+    form.reset();
+  } catch (error) {
+    status.textContent = error.message || 'Something went wrong. Please check your connection and try again.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'REGISTER MY INTEREST';
+  }
+});
+</script>
+</body>
+</html>
